@@ -21,6 +21,18 @@ const User = sequelize.define('User', {
     },
     age: {
         type: DataTypes.INTEGER(10),
+    },
+    id: {
+        type : DataTypes.INTEGER(8), primaryKey: true, autoIncrement: true
+    },
+    userName: {
+        type: DataTypes.STRING, unique:true, allowNull: false
+    }, 
+    password: {
+        type: DataTypes.TEXT(), allowNull:false, unique: true
+    }, 
+    email: {
+        type: DataTypes.STRING() ,unique: true
     }
 });
 
