@@ -1,3 +1,4 @@
+//Conexion a la base de datos
 const { Sequelize,DataTypes } = require('sequelize');
 const express = require('express');
 const app = express();
@@ -7,7 +8,9 @@ const sequelize = new Sequelize('USUARIOS', 'root', '',{
     dialect: 'mysql'
 });
 
-const User = sequelize.afterDefine('User', {
+module.exports = sequelize;
+
+const User = sequelize.define('User', {
     fistName: {
         type: DataTypes.STRING,
         allowNull: false
@@ -55,3 +58,5 @@ const usuarios = await user.findAll({
 app.listen(3000, () => {
     console.log("Servidor corriendo en el puerto 3000")
 });
+
+//
