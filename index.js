@@ -32,7 +32,7 @@ const User = sequelize.define('User', {
         type: DataTypes.TEXT(), allowNull:false, unique: true
     }, 
     email: {
-        type: DataTypes.STRING() ,unique: true
+        type: DataTypes.STRING() ,unique: true 
     }
 });
 
