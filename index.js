@@ -36,13 +36,13 @@ const User = sequelize.define('User', {
     }
 });
 
-const crearUsuarios = async  (request, response) => {
+const crearUsuarios = async  (req, res) => {
     const newUser = await User.create({
         fistName: 'John',
         lastName: 'Doe',
         age: 25
     }) 
-    response.status(200).json({
+    res.status(200).json({
         newUser
     })
     };
@@ -73,4 +73,4 @@ app.listen(3000, () => {
     console.log("Servidor corriendo en el puerto 3000")
 });
 
-//
+//ng serve --host = 127.0.0.1
