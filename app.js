@@ -8,9 +8,9 @@ const userRoutes = require('./routes/UserRoutes');
 
 //Configurar la conexión a la base de datos
 sequelize.authenticate()
-    .then(() => console.log('Conexion establecida con la base de datos'))
-    .catch(eror => console.log('Error al conectar con la base de datos:', error
-    ));
+    .then(() => {console.log('Conexion establecida con la base de datos')})
+    .catch(eror => {console.log('Error al conectar con la base de datos:', error)
+});
 
     //Llamar midlewares
     app.use(cors());

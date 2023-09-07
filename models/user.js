@@ -21,4 +21,12 @@ User.init({
         modelName: 'user'
     });
 
+    User.sync()
+        .then(() => {
+            console.log("La tabla de usuarios a sido creada");
+        })
+        .catch((error) => {
+            console.error('Error al crear la tabla de usuarios: ' ,error)
+        })
+
 module.exports = User;
